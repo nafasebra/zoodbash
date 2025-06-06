@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "New tab",
+  "version": "1.0",
+  "description": "Bullet calendar new tab",
+  "author": "Your Name",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [],
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  }
+}
