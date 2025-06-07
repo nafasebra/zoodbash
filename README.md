@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+📅 Zoodbash - a mini calendar for new tab chrome
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal new tab browser extension that displays a simple calendar using the Jalali (Persian) calendar system. Inspired by bullet journals and habit trackers, this clean and distraction-free interface helps you stay organized every time you open a new tab.
 
-Currently, two official plugins are available:
+Built with React, Vite, and TailwindCSS for fast development and beautiful design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
+📆 Jalali (Persian) calendar support
 
-## Expanding the ESLint configuration
+🧘‍♀️ Minimal design inspired by bullet journaling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📌 Habit-tracker-style visuals (optional in design)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+⚡ Fast and lightweight as a new tab replacement
+
+🛠️ Tech Stack
+- React – UI library
+- Vite – Fast build tool and dev server
+- Tailwind CSS – Utility-first CSS framework
+- dayjs and jalaliday - Handling calendar
+
+🚀 Getting Started
+1. Clone the repository
+
+```bash
+git clone https://github.com/nafasebra/zoodbash.git
+cd zoodbash
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies
+```bash
+npm install
+# or
+yarn
 ```
+
+3. Start development server
+```bash
+npm run dev
+```
+
+This will start a local development server at http://localhost:5173/.
+
+🧱 Build for Production
+```
+npm run build
+```
+This will output production-ready files to the dist/ directory.
+
+🧩 Load as a Chrome Extension
+- Run npm run build.
+- Open Chrome and go to `chrome://extensions/`.
+- Enable Developer mode (top right).
+- Click Load unpacked and select the dist/ folder.
+
+📅 Jalali Calendar Note
+This project uses the Jalali (Persian) calendar system. If you want to customize or localize the calendar behavior, look into how the dayjs or moment-jalaali library is used (if applicable).
+
+📄 License
+MIT – feel free to use, modify, and share.
+
+
+Enjoy ❤️
